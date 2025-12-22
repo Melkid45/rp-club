@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Bold', sans-serif;
+    src: url(../assets/fonts/Cygre/Bold.woff);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Regular', sans-serif;
+    src: url(../assets/fonts/Cygre/Regular.woff);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Medium', sans-serif;
+    src: url(../assets/fonts/Cygre/Medium.woff);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'SemiBold', sans-serif;
+    src: url(../assets/fonts/Cygre/ExtraBold.woff);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Light', sans-serif;
+    src: url(../assets/fonts/Cygre/Light.woff);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'ExtraBold', sans-serif;
+    src: url(../assets/fonts/Cygre/ExtraBold.woff);
+    font-weight: 800;
+}
+
+:root {
+    --regular: 'Regular', sans-serif;
+    --medium: 'Medium', sans-serif;
+    --bold: 'Bold', sans-serif;
+    --semibold: 'SemiBold', sans-serif;
+    --light: 'Light', sans-serif;
+    --extra: 'ExtraBold', sans-serif;
+}
+
+/*Text Classes*/
+
+.base-text {
+    font-family: var(--regular);
+    line-height: 120%;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.medium-text {
+    font-size: 16px;
+    line-height: 120%;
+    font-family: var(--medium);
+    text-transform: uppercase;
+}
+
+.bold-text {
+    font-size: 28px;
+    line-height: 120%;
+    font-family: "Orbitron", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.extra-text {
+    font-family: var(--extra);
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 100%;
+    text-transform: uppercase;
+}
+
+.title-text {
+    font-size: 48px;
+    line-height: 100%;
+    font-family: var(--extra);
+    text-transform: uppercase;
+    font-weight: 800;
+}

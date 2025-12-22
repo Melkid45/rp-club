@@ -1,0 +1,169 @@
+.news.news--page {
+    padding: 169px 0 150px 0px;
+}
+
+.news {
+    width: 100%;
+    padding: 0 0 150px 0px;
+    position: relative;
+
+    &--back {
+        position: absolute;
+        top: 252px;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 1405px;
+    }
+
+    &--back-start {
+        position: absolute;
+        width: 100%;
+        height: 943px;
+        top: 421px;
+        left: 0;
+        z-index: -1;
+    }
+
+    &--back-end {
+        position: absolute;
+        width: 100%;
+        height: 892px;
+        bottom: 0px;
+        left: 0;
+        z-index: -1;
+    }
+
+    &--body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 82px;
+
+        &-frame {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+
+            .news--item {
+                padding: 24px;
+                background: #FFFFFF08;
+                border-radius: 5px;
+
+                &-head {
+                    width: 100%;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    position: relative;
+                    height: 271px;
+                    padding: 16px;
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                    }
+
+                    .event-name {
+                        padding: 12px 16px;
+                        background: linear-gradient(180deg, rgba(201, 2, 45, 0.65) -4.05%, rgba(99, 1, 22, 0.65) 100%);
+                        border-radius: 3px;
+                        border: 0.5px solid #C9022D;
+                        color: var(--white);
+                        position: relative;
+                        z-index: 1;
+                        max-width: max-content;
+                        font-size: 10px;
+                    }
+                }
+
+                &-info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 18px;
+                    margin-top: 24px;
+
+                    h3 {
+                        color: var(--white);
+                        font-size: 18px;
+                        text-transform: none;
+                    }
+
+                    p {
+                        text-transform: none;
+                        color: var(--so-white);
+                    }
+                }
+
+                &-action {
+                    margin-top: 32px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    span {
+                        color: var(--so-white);
+                        font-size: 12px;
+                        text-transform: none;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        color: #C9022D;
+
+                        svg {
+                            width: 9px;
+                            height: 9px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-pagination {
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+
+            .pagination-info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                span {
+                    color: var(--white);
+                    font-size: 18px;
+                    text-transform: none;
+                }
+
+                p {
+                    color: var(--so-white);
+                    text-transform: none;
+                }
+            }
+
+            .pagination-frame {
+                display: flex;
+                gap: 12px;
+
+                button, span {
+                    padding: 18px 32px;
+                    background: #FFFFFF08;
+                    border: 0.5px solid #FFFFFF33;
+                    color: var(--so-white);
+                    border-radius: 3px;
+                }
+                span{
+                    color: var(--white);
+                }
+            }
+        }
+    }
+}

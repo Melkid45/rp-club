@@ -1,0 +1,48 @@
+/*Global*/
+@import './reset.scss';
+@import './colors.scss';
+@import './textconstuctor.scss';
+@import './common.scss';
+
+.container{
+    width: 100%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+body{
+    width: 100%;
+    background: linear-gradient(180deg, #08080A 0%, #101017 100%);
+    font-family: var(--regular);
+}
+
+/*Partials*/
+@import './header.scss';
+@import './footer.scss';
+
+/*Home*/
+@import './home/hero.scss';
+@import './home/possible.scss';
+@import './home/learn.scss';
+@import './home/news.scss';
+@import './home/faq.scss';
+
+
+/*About*/
+@import './about/history.scss';
+@import './about/steps.scss';
+@import './about/values.scss';
+
+/*News*/
+
+@import './news/article.scss';
+
+/*Guide*/
+
+@import './guide/guide.scss';
+
+/*
+#root{
+    background: linear-gradient(180deg, #08080A 0%, #101017 100%);
+}
+    */
