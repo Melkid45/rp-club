@@ -41,6 +41,15 @@ body{
 
 @import './guide/guide.scss';
 
+
+/*Wiki*/
+@import './wiki/wiki.scss';
+
+/*Shop*/
+
+@import './shop/shop.scss';
+@import './shop/today.scss';
+
 /*
 #root{
     background: linear-gradient(180deg, #08080A 0%, #101017 100%);

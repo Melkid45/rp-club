@@ -35,25 +35,9 @@ export default function AboutPage() {
                             </div>
                             <div className="item">
                                 <img src={Item1} alt="" />
-                                <div className="action">
-                                    <button className='play'>
-                                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M17 9.93042L0 19.8608V-9.28342e-06L17 9.93042Z" fill="white" />
-                                        </svg>
-                                    </button>
-                                    <p className='base-text'>ЗАПУСТЬ ВИДЕО</p>
-                                </div>
                             </div>
                             <div className="item">
                                 <img src={Item2} alt="" />
-                                <div className="action">
-                                    <button className='play'>
-                                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M17 9.93042L0 19.8608V-9.28342e-06L17 9.93042Z" fill="white" />
-                                        </svg>
-                                    </button>
-                                    <p className='base-text'>ЗАПУСТЬ ВИДЕО</p>
-                                </div>
                             </div>
                             <div className="item">
                                 <img src={Item3} alt="" />
@@ -68,14 +52,6 @@ export default function AboutPage() {
                             </div>
                             <div className="item">
                                 <img src={Item4} alt="" />
-                                <div className="action">
-                                    <button className='play'>
-                                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M17 9.93042L0 19.8608V-9.28342e-06L17 9.93042Z" fill="white" />
-                                        </svg>
-                                    </button>
-                                    <p className='base-text'>ЗАПУСТЬ ВИДЕО</p>
-                                </div>
                             </div>
                             <div className="item text-item">
                                 <h3 className='medium-text'>Сегодня CLUB</h3>

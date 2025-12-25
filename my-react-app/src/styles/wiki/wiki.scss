@@ -1,0 +1,260 @@
+.wiki {
+    width: 100%;
+    padding: 169px 0px 150px 0px;
+    position: relative;
+    &--back-st{
+        position: absolute;
+        top: 530px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 834px;
+    }
+    &--back-ed{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 1030px;
+    }
+    &--body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 82px;
+
+        &-frame {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+            width: 100%;
+
+            .frame--navigation {
+                display: flex;
+                flex-direction: column;
+                gap: 82px;
+
+                &-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    &-categories {
+                        display: flex;
+                        align-items: center;
+                        gap: 24px;
+
+                        .wiki-category--item {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            min-width: 150px;
+
+                            .item--icon {
+                                width: 40px;
+                                height: 40px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                background: var(--actient);
+                                border: 0.5px solid #C9022D;
+                                border-radius: 1px;
+
+                                svg {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+
+                            .item--information {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4px;
+
+                                h3 {
+                                    font-size: 18px;
+                                    text-transform: none;
+                                    color: var(--white);
+                                }
+
+                                span {
+                                    color: var(--so-white);
+                                    font-size: 12px;
+                                    text-transform: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &-search {
+                        display: flex;
+                        gap: 16px;
+                        align-items: center;
+
+                        input {
+                            width: 280px;
+                            height: 40px;
+                            background: #0E0E1126;
+                            color: var(--white);
+                            border: 0.5px solid #FFFFFF0F;
+                            border-radius: 3px;
+                            padding-left: 32px;
+                            font-size: 12px;
+
+                            &::placeholder {
+                                color: var(--so-white);
+                            }
+                        }
+
+                        button {
+                            padding: 0 32px;
+                            height: 40px;
+                            background: var(--actient);
+                            border-radius: 3px;
+                            border: 0.5px solid #C9022D;
+                            color: var(--white);
+                            font-size: 12px;
+                            box-shadow: 0px 0px 30px 0px #C9022D80;
+                        }
+                    }
+                }
+
+                &-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 48px;
+
+                    h2 {
+                        color: var(--white);
+                    }
+
+                    .links-list {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 32px;
+
+
+                    }
+                }
+            }
+
+            .wiki-link--item:hover {
+                svg {
+                    path {
+                        stroke: var(--white);
+                    }
+                }
+            }
+
+            .wiki-link--item {
+                padding: 24px;
+                position: relative;
+                border-radius: 5px;
+                background: #FFFFFF08;
+                border: 1px solid #FFFFFF08;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .item--vector {
+                    height: 100%;
+                    width: 246px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 0;
+                    object-fit: cover;
+                }
+
+                h3 {
+                    color: var(--white);
+                    font-size: 20px;
+                    text-transform: none;
+                }
+
+                p {
+                    color: var(--so-white);
+                    text-transform: none;
+                }
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+
+                    path {
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+
+            .frame--guide {
+                display: flex;
+                flex-direction: column;
+                gap: 48px;
+
+                &-head {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    h2 {
+                        color: var(--white);
+                    }
+
+                    a {
+                        padding: 16px 32px;
+                        background: #8A8A9A08;
+                        border: 0.5px solid #8A8A9A33;
+                        border-radius: 3px;
+                        color: var(--so-white);
+                        font-size: 12px;
+                    }
+                }
+
+                .guide--list {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 32px;
+                    .guide--item-soft{
+                        position: static;
+                    }
+                    button{
+                        color: var(--white);
+                        background: var(--actient);
+                        border-radius: 3px;
+                        border: 0.5px solid #C9022D;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            .frame--factions{
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                h2{
+                    color: var(--white);
+                }
+                .factions--list{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 32px;
+                    .wiki-link--item{
+                        padding: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 18px;
+                        svg{
+                            position: absolute;
+                            top: 41px;
+                            right: 32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

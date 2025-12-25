@@ -23,6 +23,7 @@ export default function GuidePage() {
                             user="Новичок"
                             time="≈ 12"
                             check="️15.2K"
+                            id={1}
                         />
                         <GuideItem
                             title="Первые шаги в CLUB"
@@ -30,6 +31,7 @@ export default function GuidePage() {
                             user="Новичок"
                             time="≈ 12"
                             check="️15.2K"
+                            id={2}
                         />
 
                         <GuideItem
@@ -38,6 +40,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={3}
                         />
                         <GuideItem
                             title="Управление бизнесом"
@@ -45,6 +48,7 @@ export default function GuidePage() {
                             user="продвинутый"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={4}
                         />
                         <GuideItem
                             title="Основы Roleplay"
@@ -52,6 +56,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={5}
                         />
                         <GuideItem
                             title="Вступление во фракцию"
@@ -59,6 +64,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={6}
                         />
                         <GuideItem
                             title="Первые шаги в CLUB"
@@ -66,6 +72,7 @@ export default function GuidePage() {
                             user="Новичок"
                             time="≈ 12"
                             check="️15.2K"
+                            id={7}
                         />
                         <GuideItem
                             title="Первые шаги в CLUB"
@@ -73,6 +80,7 @@ export default function GuidePage() {
                             user="Новичок"
                             time="≈ 12"
                             check="️15.2K"
+                            id={8}
                         />
 
                         <GuideItem
@@ -81,6 +89,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={9}
                         />
                         <GuideItem
                             title="Управление бизнесом"
@@ -88,6 +97,7 @@ export default function GuidePage() {
                             user="продвинутый"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={10}
                         />
                         <GuideItem
                             title="Основы Roleplay"
@@ -95,6 +105,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={11}
                         />
                         <GuideItem
                             title="Вступление во фракцию"
@@ -102,6 +113,7 @@ export default function GuidePage() {
                             user="Средний"
                             time="≈ 12 мин чтения"
                             check="15.2K"
+                            id={12}
                         />
                     </div>
                 </div>
