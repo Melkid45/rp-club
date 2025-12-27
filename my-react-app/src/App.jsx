@@ -12,6 +12,7 @@ import GuidePageItem from "./pages/GuidePageItem";
 import ShopPage from "./pages/ShopPage";
 import ProductPage from "./pages/ProductPage";
 import TodayShop from "./pages/TodayShop";
+import PaymentPage from "./pages/PaymentPage";
 function App() {
 
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/guide" element={<GuidePage />}></Route>
           <Route path="/shop" element={<ShopPage />}></Route>
           <Route path="/today" element={<TodayShop />}></Route>
+          <Route path="/payment" element={<PaymentPage />}></Route>
           <Route path="/shop/:id" element={<ProductPage />}></Route>
           <Route path="/article/:id" element={<ArticlePage />} />
           <Route path="/guide/:id" element={<GuidePageItem />} />

@@ -79,7 +79,7 @@ export default function Header() {
             </div>
             <div className="header--action-buttons">
               <ActientButton
-                path="/pay"
+                path="/payment"
               >
                 Пополнить счет
               </ActientButton>

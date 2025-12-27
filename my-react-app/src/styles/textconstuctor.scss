@@ -1,46 +1,46 @@
 @font-face {
-    font-family: 'Bold', sans-serif;
-    src: url(../assets/fonts/Cygre/Bold.woff);
+    font-family: 'Bold';
+    src: url(../assets/fonts/Cygre/Cygre-Bold.woff);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Regular', sans-serif;
-    src: url(../assets/fonts/Cygre/Regular.woff);
+    font-family: 'Regular';
+    src: url(../assets/fonts/Cygre/Cygre-Regular.woff);
     font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Medium', sans-serif;
-    src: url(../assets/fonts/Cygre/Medium.woff);
+    font-family: 'Medium';
+    src: url(../assets/fonts/Cygre/Cygre-Medium.woff);
     font-weight: 500;
 }
 
 @font-face {
-    font-family: 'SemiBold', sans-serif;
-    src: url(../assets/fonts/Cygre/ExtraBold.woff);
+    font-family: 'SemiBold';
+    src: url(../assets/fonts/Cygre/Cygre-SemiBold.woff);
     font-weight: 800;
 }
 
 @font-face {
-    font-family: 'Light', sans-serif;
-    src: url(../assets/fonts/Cygre/Light.woff);
+    font-family: 'Light';
+    src: url(../assets/fonts/Cygre/Cygre-Light.woff);
     font-weight: 300;
 }
 
 @font-face {
-    font-family: 'ExtraBold', sans-serif;
-    src: url(../assets/fonts/Cygre/ExtraBold.woff);
+    font-family: 'ExtraBold';
+    src: url(../assets/fonts/Cygre/Cygre-ExtraBold.woff);
     font-weight: 800;
 }
 
 :root {
-    --regular: 'Regular', sans-serif;
-    --medium: 'Medium', sans-serif;
-    --bold: 'Bold', sans-serif;
-    --semibold: 'SemiBold', sans-serif;
-    --light: 'Light', sans-serif;
-    --extra: 'ExtraBold', sans-serif;
+    --regular: 'Regular';
+    --medium: 'Medium';
+    --bold: 'Bold';
+    --semibold: 'SemiBold';
+    --light: 'Light';
+    --extra: 'ExtraBold';
 }
 
 /*Text Classes*/
