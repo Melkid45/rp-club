@@ -83,9 +83,11 @@ export default function Header() {
               >
                 Пополнить счет
               </ActientButton>
-              <NavLink className="base-text" to="/auth">
+              <ActientButton
+                path="/auth/register"
+              >
                 Войти
-              </NavLink>
+              </ActientButton>
             </div>
           </div>
         </div>

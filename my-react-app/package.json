@@ -10,13 +10,19 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@hookform/resolvers": "^5.2.2",
     "@splidejs/react-splide": "^0.7.12",
+    "gsap": "^3.14.2",
+    "lenis": "^1.3.17",
     "lucide": "^0.562.0",
     "lucide-react": "^0.562.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-hook-form": "^7.70.0",
     "react-router-dom": "^7.10.1",
-    "sass": "^1.97.0"
+    "sass": "^1.97.0",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

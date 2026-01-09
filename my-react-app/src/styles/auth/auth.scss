@@ -1,0 +1,108 @@
+.auth{
+    width: 100%;
+    position: relative;
+    padding: 169px 0 150px;
+    &--back{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+    }
+    &--body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 82px;
+        .head--title-wrap{
+            h2{
+                color: var(--so-white);
+                display: flex;
+                gap: 24px;
+                align-items: center;
+                .active{
+                    color: var(--white);
+                }
+            }
+        }
+        form:has(.login--inputs){
+            max-width: 546px;
+            button{
+                width: 100%;
+            }
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            padding: 48px;
+            background: #FFFFFF08;
+            border: 1px solid #FFFFFF08;
+            backdrop-filter: blur(10px);
+            max-width: 830px;
+            border-radius: 5px;
+            overflow: hidden;
+            .form--vector{
+                position: absolute;
+                bottom: -73px;
+                right: 0;
+                width: 349px;
+                height: 227px;
+                z-index: -2;
+            }
+            .login--inputs{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+            .form--inputs{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px;
+                .input--item:nth-child(-n+4){
+                    width: 360px;
+                }
+            }
+            .form--action{
+                display: flex;
+                gap: 29px;
+                align-items: center;
+                button{
+                    min-width: 360px;
+                    justify-content: center;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 120%;
+                    a{
+                        color: #C9022D;
+                    }
+                }
+            }
+            .server--error{
+                display: flex;
+                width: 100%;
+                padding: 12px 0px;
+                justify-content: center;
+                background: linear-gradient(90deg, rgba(249, 115, 22, 0.09) 0%, rgba(147, 68, 13, 0.09) 100%);
+                border: 1px solid #F973164D;
+                border-radius: 3px;
+                gap: 8px;
+                svg{
+                    width: 20px;
+                    height: 18px;
+                }
+                span{
+                    color: #F97316;
+                    text-transform: none;
+                    line-height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,13 +1,17 @@
+import { forwardRef } from "react"
+import { ref } from "yup"
 
-const InputItem = ({name, type,placeholder,id, icon}) => {
-  return (
-    <div className="input--item">
-      <label htmlFor={name}>
+const InputItem = forwardRef(
+  ({ name,error, type, placeholder, id, icon, ...props }, ref) => {
+    return (
+      <div className={`input--item ${error ? 'error' : ''}`}>
+        <label htmlFor={name}>
           {icon}
-      </label>
-      <input className="base-text" type={type} placeholder={placeholder} name={name} />
-    </div>
-  )
-}
+        </label>
+        <input ref={ref} {...props}  className="base-text" type={type || 'text'} placeholder={placeholder} name={name} />
+      </div>
+    )
 
+  }
+)
 export default InputItem

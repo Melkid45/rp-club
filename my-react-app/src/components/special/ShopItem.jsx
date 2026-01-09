@@ -1,31 +1,14 @@
 import React, { useState } from 'react'
 import Price from '@/assets/images/shop/price.svg';
 import { Link } from 'react-router-dom';
+import thisRarity from '@/utils/rarity';
 const ShopItem = ({ title, description, image, rarity, price, type, id, sale }) => {
-    const rearityClass = thisRarity();
-    function thisRarity() {
-        switch (rarity) {
-            case 'Обычное':
-                return 'common';
-            case 'неОбычное':
-                return 'uncommon';
-            case 'Редкое':
-                return 'rare';
-            case 'Эпическое':
-                return 'epic';
-            case 'Легендарное':
-                return 'legendary';
-            case 'Уникальное':
-                return 'unique';
-            default:
-                return '';
-        }
-    }
+    const rearityClass = thisRarity(rarity);
     return (
         <Link to={`/shop/${id}`}
                 state={{ title, description, image, price,id,sale,type, rarity, rearityClass }} className='shop--item'>
             <div className="shop--item-head">
-                <span className={`base-text ${thisRarity()}`}>{rarity}</span>
+                <span className={`base-text ${thisRarity(rarity)}`}>{rarity}</span>
                 <img src={image} alt="" />
                 {sale && (
                     <span className='item--sale base-text'>-{sale}%</span>

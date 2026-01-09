@@ -24,19 +24,19 @@ export default function Footer() {
             <nav>
               <span className='medium-text'>Навигация</span>
               <ul>
-                <NavLink className="base-text">Главная</NavLink>
-                <NavLink className="base-text">О проекте</NavLink>
-                <NavLink className="base-text">Блог</NavLink>
-                <NavLink className="base-text">WIKI</NavLink>
+                <NavLink to='/' className="base-text">Главная</NavLink>
+                <NavLink to='/about' className="base-text">О проекте</NavLink>
+                <NavLink to='/news' className="base-text">Блог</NavLink>
+                <NavLink to='/wiki' className="base-text">WIKI</NavLink>
               </ul>
             </nav>
             <nav>
               <span className='medium-text'>Игроку</span>
               <ul>
-                <NavLink className="base-text">Форум</NavLink>
-                <NavLink className="base-text">Магазин предметов</NavLink>
-                <NavLink className="base-text">Пополнить счет</NavLink>
-                <NavLink className="base-text">Авторизироваться</NavLink>
+                <NavLink to='/forum' className="base-text">Форум</NavLink>
+                <NavLink to='/shop' className="base-text">Магазин предметов</NavLink>
+                <NavLink to='/payment' className="base-text">Пополнить счет</NavLink>
+                <NavLink to='/auth/login' className="base-text">Авторизироваться</NavLink>
               </ul>
             </nav>
           </div>

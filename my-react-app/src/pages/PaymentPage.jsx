@@ -6,7 +6,7 @@ import InputItem from '../components/common/FormHelper.jsx/InputItem';
 import { UserRound, Mail, BanknoteIcon } from 'lucide-react'
 import CheckboxItem from '../components/common/FormHelper.jsx/CheckboxItem';
 import ModalOverlay from '../components/common/ModalOverlay';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 // Modal Method
 import Method1 from '@/assets/images/pay/method/1.png';
@@ -48,7 +48,39 @@ const IconClub = () => {
     )
 }
 export default function PaymentPage() {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false);
+    const [payMethod, setPayMethod] = useState('');
+    const [selectedMethodIndex, setSelectedMethodIndex] = useState(null);
+    const methodItemsRef = useRef([]);
+    const handleMethodSelect = (method, index, e) => {
+        methodItemsRef.current.forEach(item => {
+            if (item) item.classList.remove('current');
+        });
+
+        if (e.target.classList.contains('item')) {
+            e.target.classList.add('current');
+        } else {
+            const parentItem = e.target.closest('.item');
+            if (parentItem) {
+                parentItem.classList.add('current');
+            }
+        }
+
+        setPayMethod(method);
+        setSelectedMethodIndex(index);
+        setIsOpen(false);
+    }
+
+    const methods = [
+        { name: 'Visa', icon: Method1 },
+        { name: 'MasterCard', icon: Method2 },
+        { name: 'Мир', icon: Method3 },
+        { name: 'СБП', icon: Method4 },
+        { name: 'PayPal', icon: Method5 },
+        { name: 'BitCoin (BEP20)', icon: Method6, label: 'BitCoin (BEP20)' },
+        { name: 'USDT Tether (TRC20)', icon: Method7, label: 'USDT Tether (TRC20)' },
+        { name: 'Ethereum (ERC20)', icon: Method8, label: 'Ethereum (ERC20)' }
+    ];
     return (
         <>
             <section className='payment'>
@@ -56,7 +88,7 @@ export default function PaymentPage() {
                 <div className="container">
                     <div className="payment--body">
                         <HeadTitle
-                            title="Приобрести валюту"
+                            title={`Приобрести валюту`}
                             soft="пополнение валюты"
                         />
                         <form className='payment--body-form' action="">
@@ -75,9 +107,9 @@ export default function PaymentPage() {
                                 />
                                 <button type='button' className='input--item' onClick={() => setIsOpen(true)}>
                                     <div className="wrap">
-                                        <BanknoteIcon color='#fff'/>
+                                        <BanknoteIcon color='#fff' />
                                     </div>
-                                    <span className='choose--method base-text'>Выберите способ оплаты</span>
+                                    <span className='choose--method base-text'>{payMethod || 'Выберите способ оплаты'}</span>
                                 </button>
                                 <InputItem
                                     placeholder="Введите сумму"
@@ -125,33 +157,17 @@ export default function PaymentPage() {
             </section>
             <ModalOverlay title='Способы оплаты' isOpen={isOpen} onClose={() => setIsOpen(false)}>
                 <div className='modal--overlay-method'>
-                    <div className="item">
-                        <img src={Method1} alt="" />
-                    </div>
-                    <div className="item">
-                        <img src={Method2} alt="" />
-                    </div>
-                    <div className="item">
-                        <img src={Method3} alt="" />
-                    </div>
-                    <div className="item">
-                        <img src={Method4} alt="" />
-                    </div>
-                    <div className="item">
-                        <img src={Method5} alt="" />
-                    </div>
-                    <div className="item">
-                        <img src={Method6} alt="" />
-                        <span className='base-text'>BitCoin (BEP20)</span>
-                    </div>
-                    <div className="item">
-                        <img src={Method7} alt="" />
-                        <span className='base-text'>USDT Tether (TRC20)</span>
-                    </div>
-                    <div className="item">
-                        <img src={Method8} alt="" />
-                        <span className='base-text'>Ethereum (ERC20)</span>
-                    </div>
+                    {methods.map((method, index) => (
+                        <div
+                            key={index}
+                            ref={el => methodItemsRef.current[index] = el}
+                            className={`item ${selectedMethodIndex === index ? 'current' : ''}`}
+                            onClick={(e) => handleMethodSelect(method.name, index, e)}
+                        >
+                            <img src={method.icon} alt={method.name} />
+                            {method.label && <span className='base-text'>{method.label}</span>}
+                        </div>
+                    ))}
                 </div>
             </ModalOverlay>
         </>

@@ -1,0 +1,659 @@
+.user {
+    width: 100%;
+    position: relative;
+    padding: 152px 0 150px;
+    &--back-top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 1167px;
+    }
+    &--back-bot{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        height: 735px;
+    }
+    &--body {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+
+        h2 {
+            color: var(--white);
+        }
+
+        &-frame {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .user--frame-head {
+                display: flex;
+                gap: 32px;
+
+                .user--head-dossier {
+                    width: 698px;
+                    min-width: 698px;
+                    border-radius: 5px;
+                    background: #FFFFFF08;
+                    border: 1px solid #FFFFFF08;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 544px;
+                    padding: 32px;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        z-index: 0;
+                        width: 100%;
+                        height: 333px;
+                        bottom: 0;
+                        left: 0;
+                        background: linear-gradient(360deg, #0C0C12 0%, rgba(12, 12, 18, 0.01) 100%);
+                    }
+
+                    img {
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        width: 486px;
+                        object-fit: cover;
+                        transform: translateX(-50%);
+                        z-index: -1;
+                    }
+
+                    .user--dossier-status {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .vip {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            .wrap {
+                                padding: 16px 20px;
+                                border-radius: 3px;
+                                background: #FACC1533;
+                                border: 0.5px solid #FACC15;
+                                line-height: 100%;
+                                display: flex;
+                                color: #FACC15;
+                                font-size: 14px;
+                            }
+
+                            .info {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 6px;
+
+                                span {
+                                    color: var(--so-white);
+                                    font-size: 14px;
+                                }
+
+                                p {
+                                    font-size: 16px;
+                                    font-family: var(--bold);
+                                    color: var(--white);
+                                }
+                            }
+                        }
+
+                        .level {
+                            border-radius: 3px;
+                            padding: 16px 20px;
+                            background: var(--actient);
+                            border: 0.5px solid #C9022D;
+                            position: relative;
+                            line-height: 100%;
+                            font-size: 14px;
+                            color: var(--white);
+                            overflow: hidden;
+
+                            span {
+                                position: relative;
+                                z-index: 1;
+                            }
+
+                            &::before {
+                                position: absolute;
+                                content: '';
+                                background: #C9022D;
+                                filter: blur(35px);
+                                rotate: 28deg;
+                                width: 81px;
+                                height: 192px;
+                                left: -28px;
+                                bottom: -60px;
+                                z-index: 0;
+                            }
+                        }
+                    }
+
+                    .user--dossier-info {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        z-index: 1;
+
+                        .change--person {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            font-size: 18px;
+                            color: var(--so-white);
+                            transition: all 0.3s ease;
+
+                            &:hover {
+                                color: #C9022D;
+
+                                svg {
+                                    path {
+                                        stroke: #C9022D;
+                                    }
+                                }
+                            }
+
+                            svg {
+                                width: 13px;
+                                height: 13px;
+
+                                path {
+                                    transition: all 0.3s ease;
+                                }
+                            }
+                        }
+
+                        .info--person {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            margin-top: 18px;
+
+                            h3 {
+                                font-size: 48px;
+                                text-transform: none;
+                                color: var(--white);
+                            }
+
+                            .experience {
+                                display: flex;
+                                align-items: flex-end;
+                                gap: 12px;
+
+                                svg {
+                                    width: 29px;
+                                    height: 35px;
+                                }
+
+                                &--info {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 6px;
+
+                                    span {
+                                        font-size: 14px;
+                                        color: var(--so-white);
+                                    }
+
+                                    p {
+                                        color: var(--white);
+                                        font-family: var(--bold);
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .attribute--person {
+                            display: grid;
+                            grid-template-columns: repeat(3, 1fr);
+                            gap: 24px;
+                            margin-top: 24px;
+
+                            .item {
+                                padding: 18px;
+                                border-radius: 5px;
+                                background: #FFFFFF08;
+                                border: 1px solid #FFFFFF08;
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+
+                                .icon {
+                                    width: 40px;
+                                    aspect-ratio: 1/1;
+                                    border-radius: 1px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    background: var(--actient);
+
+                                    border: 0.5px solid #C9022D svg {
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                }
+
+                                &--info {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 4px;
+
+                                    span {
+                                        color: var(--white);
+                                        font-size: 16px;
+                                        text-transform: none;
+                                    }
+
+                                    p {
+                                        text-transform: none;
+                                        color: var(--so-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .user--head-soft {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 32px;
+                    width: 100%;
+
+                    .item {
+                        width: 479px;
+                        height: 218px;
+                        background: #FFFFFF08;
+                        border-radius: 5px;
+                        border: 1px solid #FFFFFF08;
+                        position: relative;
+                        padding: 32px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 18px;
+
+                        h3 {
+                            color: var(--white);
+                            font-size: 24px;
+                        }
+
+                        p {
+                            text-transform: none;
+                            color: var(--so-white);
+                            font-size: 14px;
+                        }
+
+                        img {
+                            position: absolute;
+                            right: 32px;
+                            max-width: 216px;
+                            object-fit: cover;
+                            bottom: 0;
+                            max-height: 170px;
+                        }
+                    }
+
+                    .user--soft-finance {
+                        padding: 32px;
+                        border-radius: 5px;
+                        background: #FFFFFF08;
+                        border: 1px solid #FFFFFF08;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        width: 100%;
+
+                        h3 {
+                            color: var(--white);
+                            font-size: 24px;
+                        }
+
+                        .user--finance-frame {
+                            display: grid;
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: repeat(2, 1fr);
+                            gap: 18px;
+                            width: 100%;
+
+                            .finance--item {
+                                padding: 18px;
+                                background: #FFFFFF08;
+                                border: 1px solid #FFFFFF08;
+                                border-radius: 5px;
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+                                position: relative;
+
+                                &-vector {
+                                    position: absolute;
+                                    right: 0;
+                                    z-index: 0;
+                                    bottom: 0;
+                                    width: 208px;
+                                    height: 100%;
+                                }
+
+                                .icon {
+                                    width: 40px;
+                                    aspect-ratio: 1/1;
+                                    border-radius: 1px;
+                                    background: var(--actient);
+                                    border: 0.5px solid #C9022D;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+
+                                    svg {
+                                        width: 24px;
+                                        height: 24px;
+                                    }
+                                }
+
+                                &-text {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 4px;
+
+                                    span {
+                                        font-size: 16px;
+                                        color: var(--white);
+                                    }
+
+                                    p {
+                                        text-transform: none;
+                                        color: var(--so-white);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .user--frame-main {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 32px;
+                .main--item {
+                    width: 49%;
+                    padding: 32px;
+                    background: #FFFFFF08;
+                    border-radius: 5px;
+                    border: 1px solid #FFFFFF08;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    height: 440px;
+                    overflow-y: auto;
+                    overscroll-behavior: contain;
+                    &::-webkit-scrollbar{
+                        width: 2px;
+                    }
+                    &::-webkit-scrollbar-track{
+                        background: #FFFFFF00;
+                    }
+                    h3 {
+                        color: var(--white);
+                        font-size: 24px;
+                    }
+
+                    &-cars {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 18px;
+
+                        &.houses {
+                            .car--item img {
+                                height: 84px;
+                                width: 147px;
+                            }
+                        }
+
+                        .car--item {
+                            padding: 18px;
+                            border-radius: 5px;
+                            background: #FFFFFF08;
+                            border: 1px solid #FFFFFF08;
+                            display: flex;
+                            gap: 24px;
+                            position: relative;
+                            &-vector{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 0;
+                                height: 100%;
+                                width: 209px;
+                            }
+                            img {
+                                width: 210px;
+                                height: 84px;
+                                object-fit: cover;
+                            }
+
+                            &-info {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 18px;
+
+                                .car--info-main {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+
+                                    span {
+                                        color: var(--white);
+                                        font-size: 18px;
+                                        text-transform: none;
+                                    }
+
+                                    p {
+                                        color: var(--so-white);
+                                        text-transform: none;
+                                    }
+                                }
+
+                                .rarity {
+                                    border: 0.5px solid;
+                                    border-radius: 3px;
+                                    padding: 12px 16px;
+                                    font-size: 10px;
+                                    display: flex;
+                                    overflow: hidden;
+                                    max-width: max-content;
+                                    position: relative;
+                                    &::before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        right: -60px;
+                                        top: -70px;
+                                        width: 62px;
+                                        height: 149px;
+                                        rotate: 28deg;
+                                        filter: blur(25px);
+                                        z-index: -1;
+                                    }
+                                }
+
+                                .rarity.common {
+                                    background: #8A8A9A26;
+                                    border-color: #8A8A9A;
+                                    color: var(--so-white);
+
+                                    &::before {
+                                        background: #8A8A9A4D;
+                                    }
+                                }
+
+                                .rarity.uncommon {
+                                    background: #10B98126;
+                                    border-color: #10B981;
+                                    color: #10B981;
+
+                                    &::before {
+                                        background: #10B9814D;
+                                    }
+                                }
+
+                                .rarity.rare {
+                                    background: #3C4BF426;
+                                    border-color: #3C4BF4;
+                                    color: #3C4BF4;
+
+                                    &::before {
+                                        background: #3C4BF44D;
+                                    }
+                                }
+
+                                .rarity.epic {
+                                    background: #8B5CF633;
+                                    border-color: #8B5CF6;
+                                    color: #8B5CF6;
+
+                                    &::before {
+                                        background: #8B5CF64D;
+                                    }
+                                }
+
+                                .rarity.legendary {
+                                    background: #F9731633;
+                                    border-color: #F97316;
+                                    color: #F97316;
+
+                                    &::before {
+                                        background: #F973164D;
+                                    }
+                                }
+
+                                .rarity.unique {
+                                    background: #C9022D26;
+                                    border-color: #C9022D;
+                                    color: #C9022D;
+
+                                    &::before {
+                                        background: #C9022D4D;
+                                    }
+                                }
+                            }
+                        }
+                        .operations--item{
+                            width: 100%;
+                            padding: 18px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            background: #FFFFFF08;
+                            border-radius: 5px;
+                            border: 1px solid #FFFFFF08;
+                            position: relative;
+                            &-vector{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                height: 100%;
+                                width: 211px;
+                            }
+                            &-info{
+                                display: flex;
+                                flex-direction: column;
+                                gap: 4px;
+                                span{
+                                    color: var(--white);
+                                    font-size: 18px;
+                                    text-transform: none;
+                                }
+                                p{
+                                    color: var(--so-white);
+                                    text-transform: none;
+                                    color: var(--so-white);
+                                }
+                            }
+                            &-summa{
+                                font-size: 18px;
+                                color: #C9022D;
+                                &.recieved{
+                                    color: #10B981;
+                                }
+                            }
+                        }
+                        .settins--item{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            position: relative;
+                            padding: 18px;
+                            border-radius: 5px;
+                            background: #FFFFFF08;
+                            border: 1px solid #FFFFFF08;
+                            &-vector{
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                height: 100%;
+                                width: 211px;
+                            }
+                            &-info{
+                                display: flex;
+                                align-items: center;
+                                gap: 156px;
+                                span{
+                                    color: var(--white);
+                                    font-size: 16px;
+                                    min-width: 106px;
+                                    text-transform: none;
+                                }
+                                p{
+                                    font-size: 16px;
+                                    color: var(--so-white);
+                                    text-transform: none;
+                                }
+                            }
+                            &-modal{
+                                display: flex;
+                                align-items: center;
+                                gap: 8px;
+                                color: var(--so-white);
+                                font-size: 16px;
+                                transition: all 0.3s ease;
+                                background: transparent;
+                                z-index: 1;
+                                &:hover{
+                                    color: #C9022D;
+                                    svg{
+                                        path{
+                                            stroke: #C9022D;
+                                        }
+                                    }
+                                }
+                                svg{
+                                    width: 11px;
+                                    height: 11px;
+                                    margin-top: 4px;
+                                    path{
+                                        transition: all 0.3s ease;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

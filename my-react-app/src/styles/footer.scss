@@ -68,6 +68,13 @@
                             color: var(--so-white);
                             font-size: 14px;
                             text-transform: none;
+                            transition: all 0.3s ease;
+                            &.active{
+                                color: #C9022D;
+                            }
+                            &:hover{
+                                color: #C9022D;
+                            }
                         }
                     }
                 }

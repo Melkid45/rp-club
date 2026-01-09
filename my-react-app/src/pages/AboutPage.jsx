@@ -21,6 +21,7 @@ export default function AboutPage() {
                 <div className="container">
                     <div className="our--history-body">
                         <HeadTitle
+                            hasBack={true}
                             title="НАША ИСТОРИЯ"
                             description="Узнайте, как создавался CLUB — от идеи до крупнейшего игрового сообщества"
                             soft="О проекте"
@@ -158,13 +159,17 @@ export default function AboutPage() {
             <section className='part'>
                 <div className="container">
                     <div className="part--body">
-                        <div className="part--body-head">
-                            <h2 className='extra-text'>СТАНЬ ЧАСТЬЮ ИСТОРИИ</h2>
-                            <p className='base-text'>Присоединяйся к тысячам игроков, которые уже выбрали CLUB <br /> своим вторым домом. Твоя история начинается здесь.</p>
-                        </div>
+                        <HeadTitle
+                            title='СТАНЬ ЧАСТЬЮ ИСТОРИИ'
+                            description='Присоединяйся к тысячам игроков, которые уже выбрали CLUB своим вторым домом. Твоя история начинается здесь.'
+                        />
                         <div className="part--body-action">
-                            <ActientButton>Зарегистрироваться</ActientButton>
-                            <NavLink className="base-text" to="/forum">Перейти на форум</NavLink>
+                            <ActientButton path='/auth/register'>
+                                Зарегистрироваться
+                            </ActientButton>
+                            <ActientButton path='/forum'>
+                                Перейти на форум
+                            </ActientButton>
                         </div>
                     </div>
                 </div>

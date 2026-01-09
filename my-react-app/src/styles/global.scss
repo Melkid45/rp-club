@@ -4,6 +4,9 @@
 @import './textconstuctor.scss';
 @import './common.scss';
 
+*::selection{
+    background: #C9022D;
+}
 .container{
     width: 100%;
     max-width: 1720px;
@@ -16,6 +19,22 @@ body{
     font-family: var(--regular);
 }
 
+
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9022D; /* Цвет ползунка */
+  border-radius: 10px;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет при наведении */
+}
 /*Partials*/
 @import './header.scss';
 @import './footer.scss';
@@ -55,6 +74,15 @@ body{
 /*Payment*/
 @import './pay/payment.scss';
 
+/*Auth*/
+@import './auth/auth.scss';
+
+/*Forum*/
+@import './forum/forum.scss';
+/*Pass*/
+@import './pass/battlepass.scss';
+/*Account*/
+@import './user/account.scss';
 /*
 #root{
     background: linear-gradient(180deg, #08080A 0%, #101017 100%);

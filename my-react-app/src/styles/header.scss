@@ -62,15 +62,6 @@
             &-buttons{
                 display: flex;
                 gap: 12px;
-                a:nth-child(2){
-                    padding: 18px 32px;
-                    color: var(--white);
-                    text-transform: uppercase;
-                    background: #8A8A9A08;
-                    border: 0.5px solid #8A8A9A33;
-                    border-radius: 3px;
-
-                }
             }
         }
     }

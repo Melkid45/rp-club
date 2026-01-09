@@ -2,7 +2,7 @@
 const ModalOverlay = ({ isOpen, onClose, children, title, className }) => {
     if (!isOpen) return null
     return (
-        <div className="modal--overlay" onClick={onClose}>
+        <div className={`modal--overlay ${className}`} onClick={onClose}>
             <div className="modal--overlay-content" onClick={e => e.stopPropagation()}>
                 <div className="modal--overlay-head">
                     <h2 className="semi-text">{title}</h2>

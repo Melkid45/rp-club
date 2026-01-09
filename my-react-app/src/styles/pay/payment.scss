@@ -22,6 +22,11 @@
         align-items: center;
         position: relative;
         max-width: 780px;
+        .head--title-wrap h2{
+            max-width: 329px;
+            text-align: center;
+            line-height: 130%;
+        }
         &::before{
             content: '';
             position: absolute;
