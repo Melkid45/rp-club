@@ -3,27 +3,7 @@
     height: 100vh;
     position: relative;
     padding: 100px 0px;
-    &::after{
-        content: '';
-        width: 100%;
-        height: 611px;
-        background: linear-gradient(0deg, rgba(7, 7, 10, 0.6) 21.46%, rgba(7, 7, 10, 0.006) 72.64%);
-        bottom: 0;
-        left: 0;
-        z-index: 0;
-        position: absolute;
-    }
-    &::before{
-        content: '';
-        width: 100%;
-        height: 489px;
-        background: linear-gradient(338.84deg, rgba(7, 7, 10, 0.45) 36.76%, rgba(7, 7, 10, 0) 86.55%);
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        rotate: 180deg;
-    }
+
     &-background{
         width: 100%;
         height: 100%;

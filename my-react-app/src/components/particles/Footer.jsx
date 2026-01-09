@@ -28,6 +28,7 @@ export default function Footer() {
                 <NavLink to='/about' className="base-text">О проекте</NavLink>
                 <NavLink to='/news' className="base-text">Блог</NavLink>
                 <NavLink to='/wiki' className="base-text">WIKI</NavLink>
+                <NavLink to='/account' className="base-text">Аккаунт</NavLink>
               </ul>
             </nav>
             <nav>
@@ -37,6 +38,7 @@ export default function Footer() {
                 <NavLink to='/shop' className="base-text">Магазин предметов</NavLink>
                 <NavLink to='/payment' className="base-text">Пополнить счет</NavLink>
                 <NavLink to='/auth/login' className="base-text">Авторизироваться</NavLink>
+                <NavLink to='/today' className="base-text">Распродажа</NavLink>
               </ul>
             </nav>
           </div>

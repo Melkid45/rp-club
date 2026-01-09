@@ -89,7 +89,7 @@
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr 1fr;
                     gap: 12px;
-
+                    max-height: 108px;
                     .item {
                         height: 48px;
                         width: 81px;
@@ -109,6 +109,7 @@
                     display: grid;
                     grid-template-columns: 1fr 1fr;
                     gap: 12px;
+                    max-height: 108px;
                     .item{
                         width: 48px;
                         aspect-ratio: 1/1;
